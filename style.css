@@ -1,0 +1,258 @@
+:root{
+  --bordeaux:#6E1329;
+  --bordeaux-fonce:#5A0F21;
+  --or:#B08A46;
+  --creme:#F6F1EA;
+  --creme-alt:#F0E9E0;
+  --anthracite:#2B2724;
+  --anthracite-doux:#5A534E;
+  --serif:"Cormorant Garamond", Georgia, serif;
+  --sans:"Karla", -apple-system, "Segoe UI", sans-serif;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--creme);
+  color:var(--anthracite);
+  font-family:var(--sans);
+  font-size:17px;
+  line-height:1.75;
+  overflow-wrap:break-word;
+}
+img{max-width:100%; display:block}
+h1,h2,h3{font-family:var(--serif); font-weight:500; line-height:1.2; margin:0}
+p{margin:0 0 1.1em}
+a{color:inherit}
+
+/* ---------- Navigation ---------- */
+.nav{
+  position:sticky; top:0; z-index:10;
+  background:rgba(246,241,234,.95);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid rgba(176,138,70,.35);
+}
+.nav ul{
+  display:flex; justify-content:center; align-items:center;
+  flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none;
+  gap:0 10px;
+  margin:0; padding:.65rem 12px;
+  list-style:none;
+}
+.nav ul::-webkit-scrollbar{display:none}
+.nav a{
+  font-size:11px; letter-spacing:.05em; text-transform:uppercase;
+  text-decoration:none; color:var(--anthracite-doux);
+  padding-bottom:2px; border-bottom:1px solid transparent;
+  white-space:nowrap;
+}
+.nav a:hover,.nav a:focus{color:var(--bordeaux); border-bottom-color:var(--or)}
+
+/* ---------- Structure ---------- */
+.wrap{width:100%; max-width:1040px; margin:0 auto; padding:0 22px}
+.wrap.narrow{max-width:680px}
+.section{padding:76px 0}
+.section-alt{background:var(--creme-alt)}
+.center{text-align:center}
+
+.section h2{
+  font-size:32px; color:var(--bordeaux); margin-bottom:1.1rem;
+}
+.section h2::after{
+  content:""; display:block; width:44px; height:1px;
+  background:var(--or); margin:.9rem 0 0;
+}
+.section h2.center::after{margin-left:auto; margin-right:auto}
+
+/* ---------- 1. Accueil ---------- */
+.accueil{padding-top:54px}
+.accueil-inner{text-align:center; padding-bottom:46px}
+.logo{
+  display:block; width:148px; height:148px; border-radius:50%;
+  margin:0 auto 24px; overflow:hidden; background:var(--creme);
+}
+.logo img{width:100%; height:100%; object-fit:cover; transform:scale(1.3)}
+.accueil h1{font-size:44px; color:var(--bordeaux); letter-spacing:.01em}
+.kicker{
+  font-size:12.5px; letter-spacing:.22em; text-transform:uppercase;
+  color:var(--or); margin:.7rem 0 0;
+}
+.rule{width:56px; height:1px; background:var(--or); margin:26px auto}
+.promesse{
+  font-family:var(--serif); font-size:21px; line-height:1.55;
+  color:var(--anthracite); max-width:26ch; margin:0 auto; text-wrap:balance;
+}
+
+/* ---------- Bandes images ---------- */
+.band{margin:0; overflow:hidden}
+.band img{
+  width:100%; height:280px; object-fit:cover;
+  object-position:center top;
+}
+.band-respiration img{height:200px; object-position:center 45%}
+
+/* ---------- 2. Le principe ---------- */
+.infos{
+  border-top:1px solid rgba(176,138,70,.5);
+  border-bottom:1px solid rgba(176,138,70,.5);
+  padding:22px 0; margin:34px 0 40px; text-align:center;
+}
+.infos-ligne{
+  font-family:var(--serif); font-size:21px; line-height:1.45;
+  color:var(--bordeaux); margin:0 0 .45em;
+  display:flex; flex-wrap:wrap; justify-content:center; gap:0 .5em;
+  font-variant-numeric:lining-nums;
+}
+.infos-ligne .item{white-space:nowrap}
+.infos-ligne .sep{color:var(--or)}
+.infos-zone{font-size:14px; color:var(--anthracite-doux); margin:0}
+.exergue{
+  margin:0; padding:0; text-align:center;
+  font-family:var(--serif); font-style:italic;
+  font-size:20px; line-height:1.75; color:var(--anthracite-doux);
+}
+.exergue p{margin:0}
+
+/* ---------- 3. Les formules ---------- */
+.section-bordeaux{background:var(--bordeaux); color:var(--creme)}
+.section-bordeaux h2{color:var(--creme)}
+.grille{
+  display:grid; grid-template-columns:1fr; gap:22px;
+  margin:40px 0 0;
+}
+.formule{
+  border:1px solid rgba(246,241,234,.28);
+  padding:28px 24px 26px;
+}
+.formule h3{font-size:26px; color:var(--creme)}
+.formule .prix{
+  font-family:var(--serif); font-size:40px; font-weight:600; color:#EFD3A2;
+  margin:.05em 0 .7em; line-height:1.15;
+  font-variant-numeric:lining-nums; white-space:nowrap;
+}
+.formule .prix span{
+  font-family:var(--sans); font-size:15px; font-weight:400;
+  letter-spacing:.02em; color:rgba(246,241,234,.8);
+}
+.formule .prix-devis{font-size:30px}
+.formule .accroche{
+  font-style:italic; font-size:15.5px; color:rgba(246,241,234,.85);
+  margin:0 0 .8em;
+}
+.formule p{color:rgba(246,241,234,.92); font-size:16px}
+.formule .exemples{font-size:15px; color:rgba(246,241,234,.75); margin-bottom:0}
+.mention{
+  text-align:center; font-size:14.5px; letter-spacing:.04em;
+  color:rgba(246,241,234,.8); margin:34px 0 34px;
+}
+
+/* ---------- Boutons ---------- */
+.btn{
+  display:inline-block; text-decoration:none;
+  font-size:13px; letter-spacing:.12em; text-transform:uppercase;
+  padding:15px 30px; border:1px solid var(--bordeaux);
+  background:var(--bordeaux); color:var(--creme);
+  transition:background .2s ease, color .2s ease;
+}
+.btn:hover,.btn:focus{background:var(--bordeaux-fonce); border-color:var(--bordeaux-fonce)}
+.btn-clair{background:var(--creme); color:var(--bordeaux); border-color:var(--creme)}
+.btn-clair:hover,.btn-clair:focus{background:#fff; color:var(--bordeaux); border-color:#fff}
+.btn-ligne{background:transparent; color:var(--bordeaux); border-color:var(--or)}
+.btn-ligne:hover,.btn-ligne:focus{background:var(--or); border-color:var(--or); color:#fff}
+.boutons{display:flex; flex-wrap:wrap; gap:14px; margin-top:34px}
+.boutons .btn{flex:1 1 auto; text-align:center}
+
+/* ---------- 4. Déroulé ---------- */
+.etapes{list-style:none; margin:40px 0 42px; padding:0}
+.etapes li{
+  padding:0 0 30px 0; margin:0 0 30px;
+  border-bottom:1px solid rgba(176,138,70,.3);
+}
+.etapes li:last-child{border-bottom:0; padding-bottom:0; margin-bottom:0}
+.num{
+  display:block; font-family:var(--serif); font-size:30px; font-weight:500;
+  color:var(--or); line-height:1; margin-bottom:.5rem;
+  font-variant-numeric:lining-nums;
+}
+.etapes h3{font-size:24px; color:var(--bordeaux); margin-bottom:.6rem}
+.etapes p{margin:0}
+
+/* ---------- 5. Qui je suis ---------- */
+.bio{display:grid; grid-template-columns:1fr; gap:34px; align-items:start}
+.portrait{margin:0}
+.portrait img{
+  width:100%; max-width:340px; margin:0 auto;
+  aspect-ratio:4/5; object-fit:cover; object-position:center top;
+  border:1px solid rgba(176,138,70,.45);
+}
+.bio-texte p:last-child{margin-bottom:0}
+.bio-texte sup{font-size:.62em; vertical-align:super; line-height:0}
+
+/* ---------- 6. Témoignage ---------- */
+.temoignage{padding:74px 0}
+.etoiles{color:#E2C079; letter-spacing:.3em; font-size:17px; margin:0 0 1.4rem}
+.temoignage blockquote{
+  margin:0; font-family:var(--serif); font-size:24px; line-height:1.55;
+  color:var(--creme);
+}
+.temoignage blockquote p{margin:0}
+.signature{
+  margin:1.6rem 0 0; font-size:13px; letter-spacing:.14em;
+  text-transform:uppercase; color:rgba(246,241,234,.78);
+}
+
+/* ---------- 7. Réserver ---------- */
+.liste{list-style:none; margin:0 0 1.6em; padding:0}
+.liste li{position:relative; padding-left:1.5em; margin-bottom:.5em}
+.liste li::before{
+  content:"—"; position:absolute; left:0; color:var(--or);
+}
+
+/* ---------- Pied de page ---------- */
+footer{
+  border-top:1px solid rgba(176,138,70,.35);
+  padding:30px 22px 36px; text-align:center;
+}
+footer p{
+  margin:0; font-size:13px; letter-spacing:.06em;
+  color:var(--anthracite-doux);
+  display:flex; flex-wrap:wrap; justify-content:center; gap:0 .5em;
+}
+footer .item{white-space:nowrap}
+footer .sep{color:var(--or)}
+
+/* ---------- Desktop ---------- */
+@media (min-width:760px){
+  body{font-size:18px}
+  .section{padding:100px 0}
+  .section h2{font-size:40px}
+  .accueil{padding-top:70px}
+  .accueil-inner{padding-bottom:60px}
+  .logo{width:190px; height:190px}
+  .accueil h1{font-size:60px}
+  .promesse{font-size:28px; max-width:46ch}
+  .band img{height:420px; object-position:center 34%}
+  .band-respiration img{height:300px; object-position:center 45%}
+  .infos-ligne{font-size:26px}
+  .exergue{font-size:23px}
+  .grille{grid-template-columns:1fr 1fr; gap:26px}
+  .formule{padding:34px 30px}
+  .formule h3{font-size:30px}
+  .formule .prix{font-size:46px}
+  .formule .prix span{font-size:16px}
+  .formule .prix-devis{font-size:34px}
+  .num{font-size:34px}
+  .nav a{font-size:12px; letter-spacing:.09em}
+  .nav ul{gap:0 1.3rem; padding:.7rem 22px}
+  .bio{grid-template-columns:320px 1fr; gap:52px}
+  .portrait img{max-width:none}
+  .temoignage blockquote{font-size:30px}
+  .boutons{gap:18px}
+  .boutons .btn{flex:0 0 auto}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none !important}
+}
